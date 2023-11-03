@@ -37,19 +37,12 @@ function sortear() {
             listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + '-->' + amigos[i + 1] + '<br>';
         }
     }
-    console.log(amigos);
 }
 
 function reiniciar() {
     amigos = [];
-    let lista = document.getElementById('lista-amigos');
-    lista.textContent = ``;
-    let listaSorteio = document.getElementById('lista-sorteio');
-    listaSorteio.textContent = ``;
-    
+    let lista = document.getElementById('lista-amigos').innerHTML = '';
+    let listaSorteio = document.getElementById('lista-sorteio').innerHTML = '';
+        
 }
-
-
-
-
 // Algoritimo para embaralhar um array: http://cangaceirojavascript.com.br/como-embaralhar-arrays-algoritmo-fisher-yates/
