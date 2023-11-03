@@ -28,6 +28,15 @@ function embaralhar(lista){
 
 function sortear() {
     embaralhar(amigos);
+    let listaSorteio = document.getElementById('lista-sorteio');
+
+    for(let i = 0; i <amigos.length; i++){
+        if (i == amigos.length - 1) {
+            listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + '-->' + amigos[0] + '<br>';
+        }else{
+            listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + '-->' + amigos[i + 1] + '<br>';
+        }
+    }
     console.log(amigos);
 }
 
@@ -35,6 +44,8 @@ function reiniciar() {
     amigos = [];
     let lista = document.getElementById('lista-amigos');
     lista.textContent = ``;
+    let listaSorteio = document.getElementById('lista-sorteio');
+    listaSorteio.textContent = ``;
     
 }
 
