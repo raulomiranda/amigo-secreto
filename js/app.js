@@ -31,7 +31,8 @@ function embaralhar(lista){
 }
 
 function sortear() {
-    embaralhar(amigos);
+    if(amigos.length > 3){
+        embaralhar(amigos);
     let listaSorteio = document.getElementById('lista-sorteio');
 
     for(let i = 0; i <amigos.length; i++){
@@ -41,6 +42,11 @@ function sortear() {
             listaSorteio.innerHTML = listaSorteio.innerHTML + amigos[i] + '-->' + amigos[i + 1] + '<br>';
         }
     }
+
+    }else{
+        alert(`Insira mais nomes para sortear`)
+    }
+    
 }
 
 function reiniciar() {
